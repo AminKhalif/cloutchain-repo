@@ -1,0 +1,14 @@
+# Environment files
+.env
+.env.local
+.env.production
+.env.development
+
+# Claude AI configuration (contains sensitive tokens)
+.claude/
+.mcp.json
+*.claude
+claude-*
+
+# Platform specific
+.vercel

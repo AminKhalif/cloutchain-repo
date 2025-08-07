@@ -1,0 +1,239 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CloutChain Design System - Modern, Clean, Professional
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 99%;
+    --foreground: 225 15% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 225 15% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 225 15% 20%;
+
+    --primary: 262 68% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 262 68% 70%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 225 15% 20%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 262 68% 95%;
+    --accent-foreground: 262 68% 60%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 76% 96%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 38 92% 96%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262 68% 60%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  /* CloutChain UI Components */
+  .wallet-button {
+    @apply inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg active:scale-95;
+  }
+  
+  .wallet-button-connected {
+    @apply bg-success text-success-foreground;
+  }
+  
+  .form-input {
+    @apply w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground transition-all duration-200 focus:ring-2 focus:ring-ring focus:border-transparent hover:border-primary/50;
+  }
+  
+  .form-select {
+    @apply w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground transition-all duration-200 focus:ring-2 focus:ring-ring focus:border-transparent hover:border-primary/50 cursor-pointer;
+  }
+  
+  .form-textarea {
+    @apply w-full px-4 py-4 rounded-lg border border-input bg-background text-foreground transition-all duration-200 focus:ring-2 focus:ring-ring focus:border-transparent hover:border-primary/50 resize-y min-h-[160px] text-base leading-relaxed;
+  }
+  
+  .action-button {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:scale-100;
+  }
+  
+  .status-badge {
+    @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium;
+  }
+  
+  .status-pending {
+    @apply bg-warning-light text-warning-foreground;
+  }
+  
+  .status-passed {
+    @apply bg-success-light text-success-foreground;
+  }
+  
+  .status-failed {
+    @apply bg-destructive/10 text-destructive;
+  }
+  
+  .status-paid {
+    @apply bg-success-light text-success-foreground;
+  }
+  
+  .campaign-card {
+    @apply bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-200 hover:border-primary/20;
+  }
+  
+  .submission-row {
+    @apply bg-card border border-border rounded-lg p-4 transition-all duration-300 hover:shadow-sm hover:border-primary/20;
+  }
+  
+  .loading-overlay {
+    @apply fixed inset-0 bg-background/80 backdrop-blur-sm flex items-center justify-center z-50;
+  }
+  
+  .page-header {
+    @apply text-3xl font-bold text-foreground mb-2;
+  }
+  
+  .section-title {
+    @apply text-xl font-semibold text-foreground mb-4;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  .animate-slide-in {
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  .animate-pulse-once {
+    animation: pulseOnce 0.6s ease-out;
+  }
+  
+  .animate-highlight {
+    animation: highlight 0.8s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulseOnce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes highlight {
+  0% {
+    background-color: hsl(var(--warning-light));
+  }
+  100% {
+    background-color: transparent;
+  }
+}

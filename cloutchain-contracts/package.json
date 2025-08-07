@@ -1,0 +1,12 @@
+{
+  "name": "cloutchain-contracts",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "CloutChain Smart Contracts",
+  "main": "deploy.js",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "ethers": "^6.8.1",
+    "solc": "^0.8.30"
+  }
+}

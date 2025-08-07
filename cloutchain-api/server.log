@@ -1,0 +1,43 @@
+✅ Supabase connection successful
+
+🚀 CloutChain API Server Started!
+══════════════════════════════════════════════════
+📡 Server running on: http://localhost:3001
+🗄️  Database: Connected to Supabase
+🏗️  Architecture: Clean separation of concerns
+══════════════════════════════════════════════════
+
+📋 Available endpoints:
+  GET  /health - Health check
+
+  🏢 BRAND DOMAIN (Campaigns):
+    POST /api/campaigns - Create campaign
+    GET  /api/campaigns - List campaigns
+    GET  /api/campaigns/open - Get open campaigns
+    GET  /api/campaigns/:id - Get campaign details
+
+  🎨 CREATOR DOMAIN (Submissions):
+    POST /api/submissions - Create submission
+    GET  /api/submissions/creator - Get creator submissions
+    GET  /api/submissions/campaign/:id - Get campaign submissions
+    POST /api/submissions/:id/update-metrics - Update metrics
+
+🎯 Ready for hackathon demo!
+2025-08-01T03:37:41.956Z - GET /health
+✅ Supabase connection successful
+2025-08-01T03:37:52.569Z - POST /api/campaigns
+✅ Campaign created: 6ae2e561-2fa4-4bc3-90b1-8a0786b11a5a
+2025-08-01T03:38:03.002Z - POST /api/submissions
+✅ Submission created: d137c4db-46fd-4340-9989-0e70fd59635d
+🎵 Fetching initial TikTok metrics for submission...
+🎵 Fetching analytics for: https://www.tiktok.com/@testuser/video/1234567890123456789
+📊 Analytics fetched successfully:
+  👤 Author: @unknown
+  ❤️  Likes: 0
+  👁️  Views: 0
+  💬 Comments: 0
+  🔄 Shares: 0
+📝 Submission updated: d137c4db-46fd-4340-9989-0e70fd59635d
+✅ Initial metrics stored for submission
+2025-08-01T03:38:25.015Z - GET /api/submissions/campaign/6ae2e561-2fa4-4bc3-90b1-8a0786b11a5a
+2025-08-01T03:38:44.956Z - GET /api/campaigns/open
